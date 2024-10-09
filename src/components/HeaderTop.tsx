@@ -93,7 +93,7 @@ const HeaderTop: FC<HeaderTopProps> = ({
                       Favorites
                     </NavLink>
                   </li>
-
+ 
                   {isAuthenticated ? (
                     <li>
                       <a href="/" onClick={(e) => e.preventDefault()}>

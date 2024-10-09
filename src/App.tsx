@@ -71,12 +71,12 @@ function App() {
       setSnackbarMessage1("You need to sign in");
       setSnackbarOpen1(true);
       setTimeout(() => {
-        window.location.href = "/Sign_in";
+        window.location.href = "/sign_in";
       }, 800); 
   
       return;
     }
-
+ 
     if (!favorites.some((fav) => fav.id === item.id)) {
       const updatedFavorites = [...favorites, item];
       setFavorites(updatedFavorites);
