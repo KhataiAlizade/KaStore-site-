@@ -8,7 +8,7 @@ import {
   Box,
   Button,
 } from "@mui/material";
-
+ 
 interface FavoritesProps {
   favorites: CombinedType[];
   removeFromFavorites: (item: any) => void;
