@@ -24,7 +24,18 @@ const MoviesGrid: FC<MovieProps> = ({ movie }) => {
           key={`${movie.id}-${index}`}
           sx={{
             boxShadow: "1px 2px 5px 2px rgba(50,50,50,0.2)",
-            width: { xs: "180px", sm: "30%", md: "23%" },
+            width: {
+              xs: "100%", 
+              sm: "47%", 
+              "@media (max-width: 600px)": {
+                width: "95%",  
+              },
+              "@media (max-width: 350px)": {
+                width: "90%", 
+              },
+              md: "30%",
+             
+            },
             marginBottom: 2,
           }} 
         >
@@ -34,9 +45,30 @@ const MoviesGrid: FC<MovieProps> = ({ movie }) => {
           >
             <CardMedia
               sx={{
-                width: { xs: "105%", sm: "100%" },
+                width: { 
+                  xs: "100%", 
+                  sm: "100%", 
+                  "@media (max-width: 600px)": {
+                    width: "100%",  
+                  },
+                  "@media (max-width: 350px)": {
+                    width: "90%", 
+                  },
+                  md: "100%",
+                 },
                 borderBottom: "1px solid black",
-                height: { xs: 260, sm: 300, md: 350 },
+                height: { 
+                  xs: "80%", 
+                  sm: "100%", 
+                  "@media (max-width: 600px)": {
+                    width: "100%",  
+                  },
+                  "@media (max-width: 350px)": {
+                    width: "100%", 
+                  },
+                  md: "100%",
+                
+                 },
               }}
               component="img"
               image={`${baseImageUrl}${movie.poster_path}`}

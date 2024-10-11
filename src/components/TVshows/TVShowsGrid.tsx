@@ -21,7 +21,17 @@ const handleCardClick = (id: number, isMovie: boolean) => {
       {tvShows.map((tvShow) => (
         <Box
           key={tvShow.id}
-          sx={{ width: { xs: '100%', sm: '48%', md: '30%' } }} 
+          sx={{ width: { 
+            xs: "100%", 
+            sm: "47%", 
+            "@media (max-width: 600px)": {
+              width: "95%",  
+            },
+            "@media (max-width: 350px)": {
+              width: "90%", 
+            },
+            md: "30%",
+           } }} 
         >
           <Card
               onClick={() => handleCardClick(tvShow.id, "title" in tvShow)}
@@ -29,8 +39,33 @@ const handleCardClick = (id: number, isMovie: boolean) => {
  
           > 
             <CardMedia
+           sx={{
+            width: { 
+              xs: "100%", 
+              sm: "100%", 
+              "@media (max-width: 600px)": {
+                width: "100%",  
+              },
+              "@media (max-width: 350px)": {
+                width: "90%", 
+              },
+              md: "100%",
+             },
+             height: { 
+              xs: "80%", 
+              sm: "100%", 
+              "@media (max-width: 600px)": {
+                width: "100%",  
+              },
+              "@media (max-width: 350px)": {
+                width: "100%", 
+              },
+              md: "100%",
+            
+             },
+           }}
               component="img"
-              height="300"
+             
               image={`https://image.tmdb.org/t/p/w500${tvShow.poster_path}`}
               alt={tvShow.name}
             />

@@ -157,11 +157,11 @@ const fetchTVShowsUntil20 = async (sortType: string, page: number = 1) => {
     fetchTVShowsUntil20(selectedSort, currentPage);
   }, [selectedSort, currentPage]);
  
-  return (
+  return ( 
     <div>
       <Container sx={{ marginTop: "30px", width: "100%" }} disableGutters>
         <Box display="flex" gap={2} width="100%">
-          <Box flex="25%">
+          <Box flex={{ xs: "45%",sm:"35%", md: "25%" }}>
             <Sidebar
               selectedSort={selectedSort}
               handleRadioChange={handleRadioChange}
@@ -176,7 +176,7 @@ const fetchTVShowsUntil20 = async (sortType: string, page: number = 1) => {
 
             />
           </Box>
-          <Box flex="75%">
+          <Box flex={{ xs: "60%", sm:"65%", md: "75%" }}>
             {loading ? (
               <Box display="flex" justifyContent="center" alignItems="center">
                 <CircularProgress />
