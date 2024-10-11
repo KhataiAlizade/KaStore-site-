@@ -10,7 +10,7 @@ interface RatedTVshowsProps {
   ratedtvshows: TVShowsType[];
 }
 const MovieCarousel: FC<RatedTVshowsProps> = ({ ratedtvshows }) => {
- const ratedshows =  ratedtvshows.slice(0,10);
+ const ratedshows =  ratedtvshows.slice(0,15);
   const settings = {
     infinite: true,
     slidesToShow: 4,
