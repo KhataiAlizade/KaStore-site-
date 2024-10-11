@@ -10,7 +10,7 @@ interface RatedTVshowsProps {
   ratedtvshows: TVShowsType[];
 }
 const MovieCarousel: FC<RatedTVshowsProps> = ({ ratedtvshows }) => {
- const ratedshows =  ratedtvshows.slice(0,15);
+ const ratedshows =  ratedtvshows.slice(0,10);
   const settings = {
     infinite: true,
     slidesToShow: 4,
@@ -30,10 +30,10 @@ const MovieCarousel: FC<RatedTVshowsProps> = ({ ratedtvshows }) => {
           slidesToShow: 1,
         },
       },
-    ],
+    ], 
   };
   const baseImageUrl = "https://image.tmdb.org/t/p/original";
-
+ 
 
   const navigate = useNavigate();
   const handleCardClick = (id: number, isMovie: boolean) => {
@@ -44,7 +44,7 @@ const MovieCarousel: FC<RatedTVshowsProps> = ({ ratedtvshows }) => {
     }
   };
   return (
-    <Box sx={{ width: "75%", margin: "0 auto", height:"600px", }}>
+    <Box sx={{ width: "75%", margin: "0 auto", height:"500px", overflow:"hidden", }}>
       <Slider {...settings}>
         {ratedshows.map((tvshows) => (
           <Card

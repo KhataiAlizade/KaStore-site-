@@ -652,6 +652,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
         9.  Counter
 --------------------------------------*/
 .statistics{
+    margin-top: 50px;
     position:relative;
     display: flex;
     align-items: center;

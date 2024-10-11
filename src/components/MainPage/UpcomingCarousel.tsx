@@ -31,7 +31,7 @@ const UpcomingCarousel: FC<UpcomingProps> = ({ upcomingmovies }) => {
         },
       },
     ], 
-  };
+  }; 
   const baseImageUrl = "https://image.tmdb.org/t/p/original";
 
   
@@ -44,7 +44,7 @@ const UpcomingCarousel: FC<UpcomingProps> = ({ upcomingmovies }) => {
     }
   };
   return (
-    <Box sx={{ width: "75%", margin: "0 auto", height:"600px" }}>
+    <Box sx={{ width: "75%", margin: "0 auto", height:"550px",overflow:"hidden", marginBottom:"0" }}>
       <Slider {...settings}>
         {upcomingmovie.map((upcoming) => (
           <Card
@@ -56,7 +56,8 @@ const UpcomingCarousel: FC<UpcomingProps> = ({ upcomingmovies }) => {
               cursor:"pointer",
               padding: 0,
               margin: 0,
-              height: "450px",
+              height: "450px", 
+          maxHeight: "450px", 
               opacity: "1 !important",
             }}
           >
